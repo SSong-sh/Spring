@@ -5,3 +5,11 @@
 0:0:0:0:0:0:0:1 - - [14/May/2024:10:12:19 +0900] "GET /java/WEB-INF/classes/com/test/java/HomeController.java HTTP/1.1" 404 721
 0:0:0:0:0:0:0:1 - - [14/May/2024:10:13:53 +0900] "GET /java HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [14/May/2024:10:13:54 +0900] "GET /java/ HTTP/1.1" 200 171
+127.0.0.1 - - [14/May/2024:10:15:54 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [14/May/2024:10:15:54 +0900] "GET /java/WEB-INF/classes/com/test/java/HomeController.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [14/May/2024:10:15:57 +0900] "GET /java/ HTTP/1.1" 200 172
+127.0.0.1 - - [14/May/2024:12:35:29 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [14/May/2024:12:35:29 +0900] "GET /begin/WEB-INF/classes/com/test/begin/di3/Main.java HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [14/May/2024:12:35:38 +0900] "GET /com/test/begin/di3/Main.java HTTP/1.1" 404 851
+0:0:0:0:0:0:0:1 - - [14/May/2024:12:35:45 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [14/May/2024:14:32:22 +0900] "GET /begin/WEB-INF/classes/com/test/begin/di3/di3.xml HTTP/1.1" 404 721

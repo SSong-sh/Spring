@@ -1,0 +1,20 @@
+package com.test.begin.di1;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		//목적] Hong에게 일을 시키자!
+		//Main > Hong (X)
+		//Main > Service > Hong (o)
+		
+		//Hong hong = new Hong();
+		
+		//Main > (위임) > Service > (위임) > Hong 
+		
+		
+		Service service = new Service();
+		service.work();
+	}
+	
+}

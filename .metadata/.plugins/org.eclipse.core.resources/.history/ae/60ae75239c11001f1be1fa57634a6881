@@ -1,0 +1,20 @@
+package com.test.begin.di3;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		Hong hong = new Hong();
+		
+		
+		Service service = new Service(hong); //의존 주입 발생(DI)
+		service.work();
+		
+		
+		
+		
+	}
+	
+}

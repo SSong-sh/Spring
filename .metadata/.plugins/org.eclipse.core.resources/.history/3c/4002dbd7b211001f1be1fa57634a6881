@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 
+		스프링 빈
+		- 스프링이라는 환경이 관리하는 객체
+		
+		스프링 빈 선언(정의)
+		- Hong hong = new Hong();
+	 -->
+	 
+	<bean id="hong" class="com.test.begin.di3.Hong"></bean>
+	<!-- <bean id="service" class="com.test.begin.di3.Service"></bean> -->
+	
+	
+	<!-- 스프링에서 의존성 주입하는 방법 (property가 setter) -->
+	<!-- <bean id="service" class="com.test.begin.di3.Service">
+		<property name="hong">
+			<bean id="hong" class="com.test.begin.di3.Hong"></bean>
+		</property>
+	</bean> -->
+	
+	<!-- ref는 만들어져 있는 객체의 식별자를 참조 할 수 있음 -->
+	<bean id="service" class="com.test.begin.di3.Service">
+		<!-- 세터 주입 -->
+		<!-- <property name="hong" ref="hong"></property> -->
+		
+		<!-- 생성자 주입 -->
+		<constructor-arg ref="hong"></constructor-arg>
+	</bean>
+	
+	
+
+</beans>
+
