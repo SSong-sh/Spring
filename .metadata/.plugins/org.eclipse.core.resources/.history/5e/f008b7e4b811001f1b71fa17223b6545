@@ -1,0 +1,14 @@
+package com.test.begin.aop.test;
+
+public class MemoImpl {
+	
+	public void add(String memo) {
+		System.out.println("메모 쓰기: " + memo);
+	}
+	
+	public String read(int seq) {
+		
+		result "메모입니다.";
+	}
+	
+}
