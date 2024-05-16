@@ -1,0 +1,9 @@
+show user; --SYSTEM
+
+alter session set "_ORACLE_SCRIPT" = true;
+
+create user spring identified by java1234;
+grant connect, resource, dba to spring;
+
+create user springboot identified by java1234;
+grant connect, resource, dba to springboot;

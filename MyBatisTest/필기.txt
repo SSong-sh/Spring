@@ -1,0 +1,94 @@
+스프링 + 웹 프로젝트 > Spring MVC Project
+
+
+Springg + DB 연동
+- Spring JDBC
+- MyBatis
+- JPA
+
+
+1. 새 프로젝트
+- Project name : MyBatisTest
+- Templates: Spring MVC Project
+- Enter a topLevelPackage: com.test.mybatis
+
+
+2. 스프링/자바 버전 변경하기
+- pom.xml
+- <org.springframework-version>5.0.7.RELEASE</org.springframework-version>
+- <java-version>11</java-version>
+- <source>11</source>
+- <target>11</target>
+
+- 패키지 탐색기 > 우클릭 > properties > Project Facets > Java > 11
+
+
+
+-------------------------------------------------------
+6. MyBatis 의존성 추가
+<dependency>
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis</artifactId>
+	<version>3.5.2</version>
+</dependency> 
+<dependency>
+	<groupId>org.mybatis</groupId>
+	<artifactId>mybatis-spring</artifactId>
+	<version>1.3.2</version>
+</dependency> 
+
+
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-tx</artifactId>
+	<version>${org.springframework-version}</version>
+</dependency> 
+<dependency>
+	<groupId>org.springframework</groupId>
+	<artifactId>spring-jdbc</artifactId>
+	<version>${org.springframework-version}</version>
+</dependency> 
+
+
+-- ojdbc8.jar
+- 직접 참조
+- bulid path -> external jar -> ojdbc8 -> deployment assembly -> add -> java build path entry -> ojdbc8 추가
+
+- MyBatis > 라이브러리(o)
+- MyBatis > 설정(x)
+- JDBC > 라이브러리 + 설정(O)
+
+
+JDBC 연결 테스트
+- src/test/java > com.test.mybatis.persistence > JDBCTest.java
+
+--------------------------------------------------------------------------------
+
+Connection Pool, 커넥션풀
+- Commons DBCP
+- HikariCP > 스프링 부트 2.X 부터 기본 적용
+
+
+1) Commons DBCP
+- pom.xml > commons-dbcp 의존성 추가
+- root-context.xml > 설정 추가
+
+Commons DBCP > 단위테스트
+- src/test/java > com.test.mybatis.persistence > DBCPTest.java
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
