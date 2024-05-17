@@ -9,6 +9,18 @@
 <link rel="stylesheet" href="http://pinnpublic.dothome.co.kr/cdn/example-min.css">
 </head>
 <body>
+	<h1>결과</h1>
+	<div>result : ${result}</div>
+	<div>count : ${count}</div>
+	<div>dto : ${dto}</div>
+	<div>names : ${names}</div>
+	
+	
+	<ul>
+		<c:forEach items="${list}" var="dto">
+		<li>${dto.name} - ${dto.address}</li>
+		</c:forEach>
+	</ul>
 
 </body>
 </html>

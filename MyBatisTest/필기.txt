@@ -127,6 +127,8 @@ MyBatis 사용 + SQL 실행
 
 - src/main/resource > mapper > mybatis.xml
 
+- src/main/resource > config > mybatis-config.xml
+
 - views > list.jsp
 		> add.jsp
 		> addok.jsp

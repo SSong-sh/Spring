@@ -10,5 +10,37 @@
 </head>
 <body>
 
+	<h1>등록하기</h1>
+	
+	<form method="POST" action="/mybatis/addok.do">
+	<table class="vertical">
+		<tr>
+			<th>이름</th>
+			<td><input type="text" name="name" required></td>
+		</tr>
+		<tr>
+			<th>나이</th>
+			<td><input type="number" name="age" required></td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td><input type="text" name="address" required></td>
+		</tr>
+		<tr>
+			<th>성별</th>
+			<td>
+				<select name="gender">
+					<option value="m">남자</option>
+					<option value="f">여자</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	
+	<div>
+		<input type="submit" value="보내기">
+	</div>
+	</form>
+
 </body>
 </html>
