@@ -130,6 +130,16 @@
 
 
 
+
+- com.test.web.controller > Ex10Controller.java	
+- com.test.web.service > BoardService.java
+					   > DataService.java(I)
+					   > MemoService.java
+- views > ex10.jsp
+- 의존주입
+
+
+
 ---------------------------------------------------------------------------------
 인터페이스 역할
 - com.test.web.connect
