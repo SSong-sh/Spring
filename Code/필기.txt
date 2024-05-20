@@ -1,0 +1,66 @@
+스프링 + 웹 프로젝트 + MyBatis > Spring MVC Project
+
+[코드 조각 관리 게시판]
+
+1. 새 프로젝트
+- Project name : Code
+- Templates: Spring MVC Project
+- Enter a topLevelPackage: com.test.code
+
+
+2. Log4j
+- 로깅 라이브러리 
+- Log4j > Logback > Log4j2
+
+- pom.xml > 기존의 log4j 의존성을 제외한다.
+- pom.xml > log4j2 의존성을 추가한다.
+
+
+- src/main/resources > log4j.xml > log4j2.xml
+- src/main/resources > log4jdbc.log4j2.properties
+
+
+<!-- log4j2 -->
+<Logger name="log4jdbc.log4j2" level="info" additivity="false">
+	<AppenderRef ref="Console" />
+</Logger>
+- 밑에서부터 위에까지 포함
+- FATAL : 아주 심각한 에러가 발생. 애플리케이션 동작 불가능 할 수 있는 에러
+- ERROR : 요청과 관련해서 발생하는 에러(일반적인 에러)
+- WARN : 처리 가능하고, 에러가 날 가능성 존재
+- INFO : 일반 메시지. 상태값 출력. 정보 출력
+- DEBUG : 디버깅 모드 시 사용하는 메시지 출력
+- TRACE : 가장 상세한 레벨 
+
+
+3. 리소스
+- src/main/resources > mapper > code.xml
+- src/main/resources > config > mybatis-config.xml
+
+
+4. 중간 점검
+- src/test/resources > com.test.code > DBTest.java
+
+
+5. DB
+- Code > script.sql
+
+6. File
+- com.test.code.controller > CodeController.java
+- com.test.code.dao > CodeDAO.java(I)
+					> CodeDAOImpl.java
+- com.test.code.dto > CodeDTO.java
+- views > list.jsp
+		> view.jsp
+		> add.jsp
+
+
+- src/test/java > com.test.code.dao > CodeDAOImplTest.java
+
+
+
+
+
+
+
+
