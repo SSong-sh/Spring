@@ -132,6 +132,7 @@ MyBatis 사용 + SQL 실행
 - views > list.jsp
 		> add.jsp
 		> addok.jsp
+		> result.jsp
 		
 - MyBatisTest > script.sql			
 

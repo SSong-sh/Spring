@@ -1,5 +1,6 @@
 package com.test.mybatis.controller;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.test.mybatis.dao.MyBatisDAO;
 import com.test.mybatis.dto.MyBatisDTO;
@@ -168,4 +170,174 @@ public class MyBatisController {
 		
 	}
 	
+	@GetMapping("/m11.do")
+	public String m11(Model model, String gender) {
+	
+		
+		//MyBatis + 동적쿼리
+		//- SQL 작성 + 제어(JSTL 유사)
+		//- 동적으로 상황에 따른 SQL 작성할 수 있는 기능
+		
+		//if문 
+		//- 주로 where절의 일부를 조작할 때 많이 사용한다.
+		
+		//- m11.do?gender=m
+		//- m11.do?gender=f
+		
+		List<MyBatisDTO> list = dao.m11(gender);
+		
+		model.addAttribute("list",list);
+		
+		
+		return "result";
+		
+	}
+	
+	@GetMapping("/m12.do")
+	public String m12(Model model, String gender) {
+	
+		//gender 유/무
+		//- m12.do?gender = m
+		//- m12.do?gender = f
+		//- m12.do
+		
+		List<MyBatisDTO> list = dao.m12(gender);
+		
+		model.addAttribute("list",list);
+		
+		
+		return "result";
+	}
+	
+	@GetMapping("/m13.do")
+	public String m13(Model model, MyBatisDTO dto) {
+		
+		//gender or address 조건으로 사용
+		//- m13.do?gender=m
+		//- m13.do?address=강동구
+		//- m13.do?gender=f&address=강동구
+		
+		List<MyBatisDTO> list = dao.m13(dto);
+		
+		model.addAttribute("list",list);
+		
+		
+		return "result";
+	}
+	
+	
+	@GetMapping("/m14.do")
+	public String m14(Model model, Integer type) {
+		
+		//- m14.do?type=1 > select name, age 
+		//- m14.do?type=2 > select name, gender, address
+		//- m14.do 		  > select * 
+		
+		List<MyBatisDTO> list = dao.m14(type);
+		
+		model.addAttribute("list",list);
+		
+		
+		return "result";
+	}
+	
+	@GetMapping("/m15.do")
+	public String m15(Model model, String column, String word) {
+		
+		//검색
+		//- m15.do?column=컬럼명&word=검색어
+		
+		//- m15.do?column=name&word=강아지 	> 동등 비교
+		//- m15.do?column=gender&word=m 	> 동등 비교
+		//- m15.do?column=seq&word=3 		> 동등 비교
+		
+		//- m15.do?column=age&word=2 		> 우위 비교
+		
+		//- m15.do?column=address&word=강동 > 패턴 비교
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("column", column);
+		map.put("word", word);
+		
+		List<MyBatisDTO> list = dao.m15(map);
+		
+		model.addAttribute("list",list);
+		
+		
+		return "result";
+	}
+	
+	
+	@GetMapping("/m16.do")
+	public String m16(Model model,MyBatisDTO dto) {
+		
+		//1개 이상의 조건 검색
+		//- m16.do?seq=1
+		//- m16.do?name=강아지
+		//- m16.do?gender=m&age=3
+		
+		//- <where> 태그는 콘텐츠의 내용 중 "and" 나 "or"로 시작하면 그 "and"나 "or"를 자동으로 삭제한다.(문맥에 맞춰서)
+		
+		List<MyBatisDTO> list = dao.m16(dto);
+		
+		model.addAttribute("list",list);
+		
+		
+		return "result";
+	}
+	
+	@GetMapping("/m17.do")
+	public String m17(Model model,MyBatisDTO dto) {
+		
+		//<set> : 수정할 때
+		//- update tblAddress set
+		
+		//- m17.do?seq=1&gender=f
+		//- m17.do?seq=1&age=5
+		//- m17.do?seq=1&address=서울시 강남구 역삼동 우체국 빌딩 &age=6
+		
+		dao.m17(dto);
+		
+		model.addAttribute("list",new ArrayList<MyBatisDTO>());
+		
+		return "result";
+		
+	}
+	
+	@GetMapping("/m18.do")
+	public String m18(Model model, @RequestParam("name") List<String> name) {
+		
+		//반복문
+		//- m18.do
+		//- m18.do?name=강아지
+		//- m18.do?name=강아지&name=고양이&name=타조
+
+		//System.out.println(name); //[강아지, 고양이, 타조]
+		
+		List<MyBatisDTO> list = dao.m18(name);
+		
+		model.addAttribute("list",list);
+		
+		
+		
+		return "result";
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
