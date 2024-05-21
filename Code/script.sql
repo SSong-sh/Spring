@@ -11,3 +11,5 @@ create sequence seqCode;
 
 
 select * from tblCode;
+
+commit;
