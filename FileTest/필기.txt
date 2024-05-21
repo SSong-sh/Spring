@@ -1,0 +1,28 @@
+
+Spring File Upload
+- cos.jar > Servlet 사용 > 개발 종료
+- commons-fileupload
+- Servlet 내장
+
+
+
+1. 새 프로젝트
+- Project name : FileTest
+- Templates: Spring MVC Project
+- Enter a topLevelPackage: com.test.file
+
+2. web.xml
+- 파일 업로드 설정
+
+
+3. servlet-context.xml
+- 파일 업로드 설정
+
+
+4. 업로드 위치
+- webapp > resources > files
+
+5. 파일 생성
+- com.test.file.controller > FileController.java
+- views > add.jsp
+		> addok.jsp
