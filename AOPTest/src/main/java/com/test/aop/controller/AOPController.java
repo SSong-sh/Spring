@@ -5,7 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.test.aop.dao.AOPDAO;
 import com.test.aop.dto.AOPDTO;
-import com.test.aop.singleton.DAO;
+import com.test.aop.dto.BoardDTO;
+import com.test.aop.dto.CommentDTO;
 import com.test.aop.singleton.TestDAO;
 
 import lombok.RequiredArgsConstructor;
@@ -27,8 +28,28 @@ public class AOPController {
 		
 		//스프링이 관리하는 모든 빈은 싱글톤
 
-		
+		//원하는 값으로만 객체를 만들기 어려움
+		//MemoDTO m1 = new MemoDTO(null, null, null, null, null)
 	
+		//생성자 순서가 자유로움
+		//생성자 객체를 자유롭게 만들 수 있음 > 생성자 오버로딩과 같음
+		BoardDTO b1 = new BoardDTO.BoardDTOBuilder()
+					.setSeq("1")
+					.setSubject("제목입니다.")
+					.setContent("내용입니다.")
+					.setName("홍길동")
+					.setRegdate("2024")
+					.bulid();
+		
+		System.out.println(b1);
+		
+		CommentDTO c1 = CommentDTO.builder()
+									.name("홍길동")
+									.subject("댓글입니다.")
+									.content("내용입니다.")
+									.build();
+		
+		System.out.println(c1);
 	
 //		System.out.println(dao == dao2);  //true
 //		System.out.println(dao.equals(dao2)); //true
