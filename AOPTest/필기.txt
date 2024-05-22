@@ -1,0 +1,30 @@
+
+
+Spring AOP
+- Annotaion 방식
+
+
+1. 새 프로젝트
+- Project name : AOPTest
+- Templates: Spring MVC Project
+- Enter a topLevelPackage: com.test.aop
+
+
+2. AOP 의존성 추가
+- 2개
+
+
+3. servlet-context.xml
+- AOP를 어노테이션 방식을 설정할 수 있게
+
+4. 파일 생성
+- com.test.aop.controller > AOPController.java
+- com.test.aop.dao 		  > AOPDAO.java(I)
+						  > AOPDAOImpl.java
+- com.test.aop.dto		  > AOPDTO.java 
+
+- views > list.jsp
+		> add.jsp
+		> view.jsp
+		
+- com.test.aop.aspect 	> Logger.java

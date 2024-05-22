@@ -7,5 +7,6 @@
   <module moduleId="org.eclipse.jst.jee.server:hello" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:NontilesTest" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:WebTest" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:AOPTest" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:BeginTest" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>
