@@ -25,6 +25,8 @@ C:\class\code\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\23229
 \TilesTest\src\main\java
 C:\class\code\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\684750119.index
 \NontilesTest\src\main\java
+C:\class\code\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2924628393.index
+\MyBatisSimpleTest\src\main\java
 C:\class\code\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1611059485.index
 \RESTfulTest\src\main\java
 C:\class\code\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3115410387.index

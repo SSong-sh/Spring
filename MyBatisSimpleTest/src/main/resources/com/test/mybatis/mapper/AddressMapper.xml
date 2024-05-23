@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+<!-- 인터페이스 적은거 -->
+<mapper namespace="com.test.mybatis.mapper.AddressMapper">
+
+<!-- 해당 인터페이스가 가지고 있는 메서드 이름을 ID로 -->
+	<select id="list" resultType="com.test.mybatis.dto.AddressDTO">
+		select * from tblAddress
+	</select>
+
+</mapper>

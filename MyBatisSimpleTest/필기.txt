@@ -1,0 +1,22 @@
+Spring MyBatis + Interface Mapper
+
+
+10. web.xml 
+- 필터 추가
+
+
+11. root-context.xml
+- HikariCP
+- MyBatis
+
+12. 파일생성
+- com.test.mybatis.controller > AddressController.java
+- com.test.mybatis.dao > AddressDAO.java(I)
+					   > AddressDAOImpl.java
+- com.test.mybatis.dto > AddressDTO.java
+
+- com.test.mybatis.mapper > AddressMapper.java(I)			
+
+
+
+- src/main/resources > com > test > mybatis > mapper	   

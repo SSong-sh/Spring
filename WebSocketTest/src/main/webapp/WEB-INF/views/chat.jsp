@@ -164,6 +164,14 @@
 			
 		});
 		
+		//f5 새로고침 금지 , Ctrl + R
+		window.onkeydown = () => {
+			if(event.keyCode == 116 || (event.ctrlKey && event.keyCode == 82)) {
+				event.preventDefault();
+				return false;
+			}
+		};
+		
 		
 		//서버 주소
 		const url = 'ws://localhost:8080/websocket/chatserver.do';
