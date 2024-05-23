@@ -1,0 +1,35 @@
+
+
+1. WebSocket
+- 웹 소켓은 하나의 TCO 접속에 전이중 통신 채널을 제공하는 컴퓨터 통신 프로토콜이다.
+- Socket(규격) > 네트워트상의 호스트간의 데이터를 주고 받는 규약
+- WebSocket은 ws 프로토콜을 기반으로 클라이언트와 서버 사이에 지속적인 완전 양방향 연결 스트림을 만들어주는 기술
+
+소켓 동작
+1. 호스트A, 호스트B
+2. 호스트A > 소켓(전화기) 생성 + IP주소(+포트번호) > 종단점(EndPoint)
+3. 호스트B > 소켓(전화기) 생성 + IP주소(+포트번호) > 종단점(EndPoint)
+
+4. 호스트B > 받는 사람 > 서버 > 미리 수신 대기 준비 
+5. 호스트A > 거는 사람 > 클라이언트 > 호스트B 종단점 + 연결 시도
+6. 호스트B > 연결 성립 > 호스트A와 연결이 되어 있는 전용 소켓을 생성(***)
+
+
+7. 서로 연결 > 서로간의 데이터를 송수신 가능
+
+8. 호스트A, 호스트B > 소켓 종료(close) > 통신 종료
+
+
+- 파일 생성
+//component-scan에 등록이 안되면 인식 못함
+- com.test.websocket.controller > SocketController.java
+- com.test.websocket.server > SocketServer.java
+
+- views > test.jsp
+
+- com.test.websocket.controller > ChatController.java
+- views > index.jsp //접속화면
+		> chat.jsp	//대화화면
+		
+- com.test.websocket.server > ChatServer.java
+- com.test.websocket.domain > Message.java
