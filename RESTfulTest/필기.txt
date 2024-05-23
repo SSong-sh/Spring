@@ -71,8 +71,19 @@ REST API 구현 서비스
 - Swagger(API 명세) > springfox, springdocs
 
 
+12. Swagger
+- REST Client 역할
+- REST API 명세서(도움말) > 관리용이
+- 2011년
 
+12.1 SwaggerConfig
+- com.test.rest.config > SwaggerConfig.java
 
+12.2 servlet -context.xml
+- resource location 추가
+
+12.3 실행
+- http://localhost:8080/rest/swagger-ui.html
 
 
 
