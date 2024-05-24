@@ -13,3 +13,5 @@ create sequence seqCode;
 select * from tblCode;
 
 commit;
+
+select * from tblAddress;
