@@ -15,7 +15,7 @@
 	</insert>
 	
 	<resultMap type="com.test.security.dto.AuthDTO" id="authMap">
-		<id column="memberid" property="memberid"/>
+		<!-- <id column="memberid" property="memberid"/> -->
 		<result column="auth" property="auth"/>
 	</resultMap>
 	

@@ -6,6 +6,7 @@
 <aop-project name="TilesTest"/>
 <aop-project name="WebSocketTest"/>
 <aop-project name="MyBatisTest"/>
+<aop-project name="SecurityTest"/>
 <aop-project name="WebTest"/>
 <aop-project name="RESTfulTest"/>
 <aop-project name="BeginTest">
